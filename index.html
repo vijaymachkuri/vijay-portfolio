@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Engineer Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Share+Tech+Mono&display=swap"
+    rel="stylesheet">
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'nth-black': 'var(--nth-black)',
+            'nth-red': 'var(--nth-red)',
+            'nth-white': 'var(--nth-white)',
+            'nth-grey': 'var(--nth-grey)',
+            'nth-border': 'var(--nth-border)',
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            mono: ['"Share Tech Mono"', 'monospace'],
+          },
+          backgroundImage: {
+            'dot-pattern': 'radial-gradient(var(--nth-grey) 1px, transparent 1px)',
+          },
+          backgroundSize: {
+            'dot-pattern': '20px 20px',
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    :root {
+      --nth-black: #0a0a0a;
+      --nth-red: #D71920;
+      --nth-white: #f2f2f2;
+      --nth-grey: #333333;
+      --nth-border: rgba(242, 242, 242, 0.15);
+    }
+
+    .light-mode {
+      --nth-black: #f2f2f2;
+      --nth-red: #D71920;
+      --nth-white: #0a0a0a;
+      --nth-grey: #a3a3a3;
+      --nth-border: #000000;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background-color: var(--nth-black);
+      color: var(--nth-white);
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+
+    ::-webkit-scrollbar-track {
+      background: var(--nth-black);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background: #333;
+      border-radius: 4px;
+    }
+
+    ::-webkit-scrollbar-thumb:hover {
+      background: #D71920;
+    }
+
+    .dot-grid {
+      background-image: radial-gradient(#333 1px, transparent 1px);
+      background-size: 24px 24px;
+    }
+
+    /* Autofill Fix */
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    textarea:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 30px var(--nth-black) inset !important;
+      -webkit-text-fill-color: var(--nth-white) !important;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+  </style>
+  <script type="importmap">
+{
+  "imports": {
+    "react/": "https://aistudiocdn.com/react@^19.2.1/",
+    "react": "https://aistudiocdn.com/react@^19.2.1",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.2.1/",
+    "lucide-react": "https://aistudiocdn.com/lucide-react@^0.555.0",
+    "gsap/": "https://aistudiocdn.com/gsap@^3.13.0/",
+    "gsap": "https://aistudiocdn.com/gsap@^3.13.0",
+    "three": "https://aistudiocdn.com/three@^0.181.2",
+    "constants": "https://aistudiocdn.com/constants@^0.0.2"
+  }
+}
+</script>
+  <link rel="stylesheet" href="/index.css">
+</head>
+
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/index.tsx"></script>
+</body>
+
+</html>
