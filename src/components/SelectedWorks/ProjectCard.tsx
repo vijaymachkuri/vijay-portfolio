@@ -20,7 +20,12 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       className={`flex flex-col ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'} gap-8 md:gap-16 items-center`}
     >
       {/* Image Side */}
-      <div className="w-full md:w-3/5 group relative overflow-hidden cursor-pointer">
+      <a
+        href={project.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="w-full md:w-3/5 group relative overflow-hidden cursor-pointer block"
+      >
         <div className="absolute inset-0 bg-nth-red/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-20 mix-blend-overlay"></div>
         <img
           src={project.image_url}
@@ -33,15 +38,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             VIEW_CASE_STUDY
           </div>
         </div>
-      </div>
+      </a>
 
       {/* Content Side */}
       <div className="w-full md:w-2/5 space-y-4">
         <div className="font-mono text-nth-red text-sm">0{index + 1} // {project.tech[0]}</div>
-        <h3 className="text-3xl font-bold text-nth-white group hover:text-nth-red transition-colors flex items-center gap-2 cursor-pointer">
+        <a
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-3xl font-bold text-nth-white group hover:text-nth-red transition-colors flex items-center gap-2 cursor-pointer inline-flex"
+        >
           {project.title}
           <ArrowUpRight className="opacity-0 group-hover:opacity-100 transition-opacity text-nth-red" size={24} />
-        </h3>
+        </a>
         <p className="text-nth-white/70 leading-relaxed font-light">
           {project.description}
         </p>
