@@ -92,10 +92,9 @@ export const CONTACT_INFO = {
 export const NAV_LINKS = [
   { name: 'Home', href: '#home' },
   { name: 'About', href: '#about' },
-  { name: 'Skills', href: '#skills' },
-  { name: 'Projects', href: '#projects' },
+  { name: 'Skills', href: '#technical-arsenal' },
+  { name: 'Projects', href: '#selected-works' },
   { name: 'Contact', href: '#contact' },
-  { name: 'Resume', href: '/resume.pdf' },
 ];
 
 // Profile Image Source

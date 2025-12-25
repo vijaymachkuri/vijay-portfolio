@@ -42,11 +42,11 @@ const TechnicalArsenal: React.FC = () => {
               start: "top 95%",
               toggleActions: "play none none reverse"
             },
-            y: 10,
+            y: 5, // Minimalistic movement
             autoAlpha: 0,
-            duration: 0.4,
-            stagger: 0.03, // Even faster stagger
-            ease: "power2.out"
+            duration: 0.8, // Smoother, slower fade
+            stagger: 0.05,
+            ease: "power1.out" // Softer ease
           });
         });
 
