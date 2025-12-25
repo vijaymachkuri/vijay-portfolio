@@ -2,6 +2,7 @@
 -- Profiles Table
 create table public.profiles (
   id uuid references auth.users not null primary key,
+  updated_at timestamp with time zone,
   email text,
   full_name text,
   role text,
